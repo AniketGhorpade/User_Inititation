@@ -1,14 +1,12 @@
-#import seaborn as sns
-#import matplotlib.pyplot as plt
+
 import numpy as np
 import pickle
 import streamlit as st
-#from sklearn.tree import plot_tree
 from datetime import datetime
 from PIL import Image
 
 #loading saved model
-loaded_model = pickle.load(open('C:/Users/Aniket/Desktop/model/trained_model.sav','rb'))
+loaded_model = pickle.load(open('trained_model.sav','rb'))
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
     
@@ -26,19 +24,12 @@ st.markdown(f"<p style='font-family: Arial, sans-serif; font-weight: bold;'> Upd
 # Initiation Percentages
 #lst = []
 
-# Display an image from a local file
-image_path = Image.open('C:/Users/Aniket/Desktop/img.png')
+# URL of the image on GitHub
+image_path = "img.png"
 st.image(image_path,width=700,channels='RBG')
 
-#m = loaded_model
-#plt.figure(figsize=(30,15))  # Adjust the figure size as needed
-#plot_tree(m, feature_names=["2finger_touch","dpad+camera","dpad_time","no_of_jumps","player_camera"], class_names=["0", "1",], filled=True,fontsize=20,max_depth=4)
-#st.pyplot()
-#creating a fuction for prediction
-
 def prediction(input_data):
-    
-    #inp_data = [0,3,15,1,2]
+
     arr = np.asarray(input_data)
     arr = arr.reshape(1,-1)
     pred = loaded_model.predict(arr)
