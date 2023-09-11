@@ -47,13 +47,12 @@ def men():
     # getting the input data 
     
 
-    two_finger_touch = st.text_input('**Two finger touch count (0-200)**')
-    dpad_camera = st.text_input('**Dpad + camera touch count (0-250)**')
-    dpad_time = st.text_input('**Dpad touch time (0-200)**')
-    no_of_jumps = st.text_input('**Number of jumps (0-200)**')
-    #player_camera = st.text_input('**Camera touch count (0-10)**')
+    two_finger_touch = st.text_input('**Two finger touch count (0-200) : shows how many times user used two fingers in one game**')
+    dpad_camera = st.text_input('**Dpad & pan camera touch count (0-250) : shows how many times user used dpad & pan camera both in one game**')
+    dpad_time = st.text_input('**Dpad touch time (0-200 seconds) : shows time spent by user using dapd in one game**')
+    no_of_jumps = st.text_input('**Number of jumps count (0-200) : shows how many times user has jumped in one game**')
     
-    option = st.selectbox(label="**Select Player Camera Count**",
+    option = st.selectbox(label="**Player pan camera count : shows how many times user has used pan camera in one game**",
                               options = ("0-50","50-100","100-150","150-200","200-250","250-300","300-350"))
                               
     if option == "0-50":
