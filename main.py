@@ -47,7 +47,7 @@ def men():
     # getting the input data 
     
 
-    two_finger_touch = st.text_input('**Two finger touch count (0-200) : shows how many times user used two fingers in one game**')
+    two_finger_touch = st.text_input('**Two finger touch count (0-200) : captures the amount of time a user spends in seconds with both fingers on the screen (integer)**')
     dpad_camera = st.text_input('**Dpad & pan camera touch count (0-250) : shows how many times user used dpad & pan camera both in one game**')
     dpad_time = st.text_input('**Dpad touch time (0-200 seconds) : shows time spent by user using dapd in one game**')
     no_of_jumps = st.text_input('**Number of jumps count (0-200) : shows how many times user has jumped in one game**')
